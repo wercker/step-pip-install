@@ -12,5 +12,5 @@ then
         success 'pip install succeeded'
     fi
 else
-    debug 'skipping pip install, no requirements.txt found in directory'
+    fail 'no requirements.txt found in directory'
 fi
