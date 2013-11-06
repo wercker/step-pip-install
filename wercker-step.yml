@@ -1,3 +1,8 @@
 name: pip-install
 version: 0.0.2
 description: pip-install step
+properties:
+  auto_run_wheel:
+    type: boolean
+    required: false
+    default: true
