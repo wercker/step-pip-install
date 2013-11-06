@@ -39,7 +39,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
-## 0.0.2
+## 0.0.3
 
 - `auto_run_wheel` property added
 - `pip wheel` behavior added (if `$PIP_USE_WHEEL` is set to true )
