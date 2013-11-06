@@ -1,9 +1,9 @@
 if [ -f "requirements.txt" ]
 then
-    if [ "$WERCKER_PIP_INSTALL_AUTO_RUN_WHEEL" = "true"]; then
-        if [ -z "$PIP_USE_WHEEL"]; then
+    if [ "$WERCKER_PIP_INSTALL_AUTO_RUN_WHEEL" = "true" ]; then
+        if [ -z "$PIP_USE_WHEEL" ]; then
             if [ "$PIP_USE_WHEEL" = "true" ]; then
-                if [ -z "$WERCKER_WHEEL_DIR"]; then
+                if [ -z "$WERCKER_WHEEL_DIR" ]; then
                     pip wheel -r requirements.txt --wheel-dir=WERCKER_WHEEL_DIR
                 else
                     pip wheel -r requirements.txt
