@@ -15,7 +15,7 @@ requirements when the virtualenv step is also used.
 for installing packages outside of requirements.txt). The property can contain
 more than one package, specified as a single string seperated by spaces.
 * `pip_command` (optional, default="pip"). Can be used to switch to python 3
-specific pip on Ubuntu: pip3.
+specific pip on Ubuntu: pip-3.2.
 * `auto_run_wheel` (optional, default=true). If the `PIP_USE_WHEEL` environment
 variable is set to true. The pip install step will also run `pip wheel` before
 running pip install. Settings `auto_run_wheel` to false will disable this
