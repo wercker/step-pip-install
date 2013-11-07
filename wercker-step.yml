@@ -1,5 +1,5 @@
 name: pip-install
-version: 0.0.5
+version: 0.0.6
 description: pip-install step
 properties:
   requirements_file:
@@ -21,3 +21,9 @@ properties:
     type: boolean
     required: false
     default: false
+  extra_args:
+    type: string
+    default: ""
+  extra_wheel_args:
+    type: string
+    default: ""
