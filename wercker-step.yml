@@ -1,5 +1,5 @@
 name: pip-install
-version: 0.0.4
+version: 0.0.5
 description: pip-install step
 properties:
   requirements_file:
@@ -10,6 +10,9 @@ properties:
     type: string
     default: ""
     required: false
+  pip_command:
+    type: string
+    default: "pip"
   auto_run_wheel:
     type: boolean
     required: false

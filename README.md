@@ -14,6 +14,8 @@ requirements when the virtualenv step is also used.
 * `packages_list` (optional, default=""). List of packages to install (usefull
 for installing packages outside of requirements.txt). The property can contain
 more than one package, specified as a single string seperated by spaces.
+* `pip_command` (optional, default="pip"). Can be used to switch to python 3
+specific pip on Ubuntu: pip3.
 * `auto_run_wheel` (optional, default=true). If the `PIP_USE_WHEEL` environment
 variable is set to true. The pip install step will also run `pip wheel` before
 running pip install. Settings `auto_run_wheel` to false will disable this
@@ -91,6 +93,9 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.5
+- `pip_command` option added
 
 ## 0.0.4
 
