@@ -2,7 +2,19 @@ name: pip-install
 version: 0.0.3
 description: pip-install step
 properties:
+  requirements_file:
+    type: string
+    default: requirements.txt
+    required: false
+   packages_list:
+    type: string
+    default: ""
+    required: false
   auto_run_wheel:
     type: boolean
     required: false
     default: true
+  cleanup_wheel_cache:
+    type: boolean
+    required: false
+    default: false
