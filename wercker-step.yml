@@ -5,8 +5,8 @@ properties:
   requirements_file:
     type: string
     required: false
-    default: "requirements.txt"
-   packages_list:
+    default: requirements.txt
+  packages_list:
     type: string
     default: ""
     required: false
