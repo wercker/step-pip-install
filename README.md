@@ -12,7 +12,8 @@ requirements when the virtualenv step is also used.
 * `requirements_file` (optional, default=requirements.txt). The
 `requirements.txt` file to use. Set to empty if no requirements file is used.
 * `packages_list` (optional, default=""). List of packages to install (usefull
-for installing packages outside of requirements.txt).
+for installing packages outside of requirements.txt). The property can contain
+more than one package, specified as a single string seperated by spaces.
 * `auto_run_wheel` (optional, default=true). If the `PIP_USE_WHEEL` environment
 variable is set to true. The pip install step will also run `pip wheel` before
 running pip install. Settings `auto_run_wheel` to false will disable this
@@ -31,13 +32,36 @@ Basic usage:
     - pip-install
 ```
 
-To disable running wheel altogether, use:
+If your requirements file is not named `requirements.txt`, but dev-requirements.txt:
+
+```
+    - pip-install:
+        requirements_file: "dev-requirements.txt"
+```
+
+If you want to install a package besides the ones specified in the
+requirements.txt file:
+
+```
+    - pip-install:
+        packages_list: "mock httpretty"
+```
+
+Only install the mock and httpretty packages
+```
+    - pip-install:
+        requirements_file: ""
+        packages_list: "mock httpretty"
+```
+
+To disable the automatic execution of wheel, use:
 ```
     - pip-install:
         auto_run_wheel: false
 ```
 
-Run pip install, but clean up the PIP_WHEEL_DIR before running pip wheel:
+To run pip install, but with a clean up of the PIP_WHEEL_DIR:
+
 ```
     - pip-install:
         cleanup_wheel_dir: true
@@ -67,6 +91,12 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.4
+
+- `cleanup_wheel_dir` support added
+- `requirements_file` support added
+- `packages_list` option added
 
 ## 0.0.3
 
