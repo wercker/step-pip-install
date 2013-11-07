@@ -4,8 +4,8 @@ description: pip-install step
 properties:
   requirements_file:
     type: string
-    default: requirements.txt
     required: false
+    default: "requirements.txt"
    packages_list:
     type: string
     default: ""
