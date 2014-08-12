@@ -10,7 +10,7 @@ via the `packages_list` parameter:
 
 
 ```
-    - pip-install
+    - pip-install:
         requirements_file: ""
         packages_list: "mock"
 ```
