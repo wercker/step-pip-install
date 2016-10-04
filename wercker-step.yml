@@ -17,7 +17,7 @@ properties:
     type: boolean
     required: false
     default: true
-  cleanup_wheel_cache:
+  cleanup_wheel_dir:
     type: boolean
     required: false
     default: false
