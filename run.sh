@@ -28,7 +28,7 @@ fi
 if [ ! -z "$WERCKER_PIP_INSTALL_CLEANUP_WHEEL_DIR" ]; then
     if [ ! -z "$PIP_WHEEL_DIR" ]; then
         info "Clearing WHEEL_DIR."
-        rm $PIP_USE_WHEEL/*.whl
+        rm $PIP_WHEEL_DIR/*.whl
     else
         fail "Unable to clear wheel dir. PIP_WHEEL_DIR is not defined"
     fi
