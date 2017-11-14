@@ -1,0 +1,29 @@
+name: pip-install
+version: 1.0.0
+summary: pip-install step
+properties:
+- name: requirements_file
+  type: string
+  required: false
+  default: requirements.txt
+- name: packages_list
+  type: string
+  default: ""
+  required: false
+- name: pip_command
+  type: string
+  default: "pip"
+- name: auto_run_wheel
+  type: boolean
+  required: false
+  default: true
+- name: cleanup_wheel_cache
+  type: boolean
+  required: false
+  default: false
+- name: extra_args
+  type: string
+  default: ""
+- name: extra_wheel_args
+  type: string
+  default: ""
