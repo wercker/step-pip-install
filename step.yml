@@ -1,5 +1,5 @@
 name: pip-install
-version: 1.0.0
+version: 1.0.1
 summary: pip-install step
 properties:
 - name: requirements_file
